@@ -7,6 +7,14 @@ class KudaGoShowingsResponse(
         val results: List<KudaGoShowingResponse>
 )
 
+class KudaGoMoviesResponse(
+        val count: Int,
+        val next: String?,
+        val previous: String?,
+        val results: List<Movie>) {
+    operator fun get(i: Int) = results[i]
+}
+
 class KudaGoShowingResponse(
         val id: Int,
         val movie: Movie,
